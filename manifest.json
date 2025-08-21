@@ -1,0 +1,20 @@
+{
+  "name": "WatchThis",
+  "short_name": "WatchThis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "Logowt.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "Logowt.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ]
+}
