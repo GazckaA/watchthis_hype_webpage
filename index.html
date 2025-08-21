@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="Logowt.jpg">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d1117">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">#
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -80,7 +80,7 @@
       padding: 0 20px;
     }
     h1 {
-      font-size: 4em;
+      font-size: clamp(24px, 8vw, 72px);
       margin-bottom: 10px;
     }
     p {
@@ -104,24 +104,6 @@
     .socials a:hover {
       color: #ff4081;
     }
-    /* --- Ajuste para pantallas móviles --- */
-		@media (max-width: 768px) {
- 		 .content {
-   		 padding: 0 20px; /* Agrega espacio a los lados del texto */
-  		}
-		}
-
-		/* --- Soporte para notch y barras transparentes --- */
-		html, body {
- 		 height: 100%;
-  		margin: 0;
-  		padding: 0;
-  		/* Hace que el video y todo el contenido se extienda incluso bajo el notch */
-  		padding-top: env(safe-area-inset-top);
-  		padding-bottom: env(safe-area-inset-bottom);
-  		padding-left: env(safe-area-inset-left);
-  		padding-right: env(safe-area-inset-right);
-		}
   </style>
 </head>
 <body>
