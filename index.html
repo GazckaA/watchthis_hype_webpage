@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximamente</title>
+  <title>WatchThis</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/jpg" href="Logowt.jpg">
   <link rel="apple-touch-icon" sizes="180x180" href="Logowt.jpg">
@@ -33,6 +33,17 @@
       width: 100%; height: 100%;
       object-fit: cover;
       z-index: -2;
+      display: none; /* Ocultamos por defecto y mostramos según pantalla */
+    }
+
+    /* Mostrar solo video horizontal en pantallas grandes */
+    .video-horizontal { display: block; }
+    .video-vertical { display: none; }
+
+    /* En pantallas angostas, cambiamos */
+    @media (max-width: 768px) {
+      .video-horizontal { display: none; }
+      .video-vertical { display: block; }
     }
 
     /* Sombra encima del video */
@@ -96,22 +107,29 @@
 </head>
 <body>
 
-  <!-- Video de fondo -->
-  <video autoplay muted loop class="video-bg">
-    <source src="tu-video.mp4" type="video/mp4">
+  <!-- Video de fondo horizontal (desktop) -->
+  <video autoplay muted loop playsinline class="video-bg video-horizontal">
+    <source src="video-horizontal.mp4" type="video/mp4">
     Tu navegador no soporta video HTML5.
   </video>
+
+  <!-- Video de fondo vertical (móvil) -->
+  <video autoplay muted loop playsinline class="video-bg video-vertical">
+    <source src="video-vertical.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
   <div class="overlay"></div>
 
   <!-- Navbar -->
   <nav>
-    <img src="tu-logo.png" alt="Logo">
+    <img src="Logowt.jpg" alt="Logo">
   </nav>
 
   <!-- Contenido principal -->
   <div class="content">
     <h1>Próximamente</h1>
-    <p>Aquí irá tu mensaje secundario ✨</p>
+    <p>Juega, repite, comparte.</p>
   </div>
 
   <!-- Footer con redes -->
