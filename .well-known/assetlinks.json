@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.watchthis.app",
+            "sha256_cert_fingerprints": [
+                "D6:61:AB:8B:C8:60:96:FD:55:6C:01:7A:0B:96:42:0F:0B:BC:38:3D:BA:65:DF:20:ED:AB:59:5D:57:97:6C:96"
+            ]
+        }
+    }
+]
